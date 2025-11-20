@@ -1,0 +1,25 @@
+.main-grid {
+  //width: 100%;
+  margin: 0 40px; // lewa i prawa
+}
+
+.tile {
+
+  background: #e5e5e5;
+  //padding: 24px;
+  //position: relative;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  .content {
+    max-width: 60%;
+  }
+ .tile-image {
+    right: 20px;
+    bottom: 20px;
+    height: 18em;
+  }
+ 
+}
+

@@ -58,7 +58,7 @@ $card-border: #E5E7EB;
 
     .hero-img img {
       padding-bottom: 0;
-      width: 640px;
+      width: 740px;
       height: auto;
       object-fit: contain;
 
@@ -157,12 +157,76 @@ $card-border: #E5E7EB;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+     h2 {
+      font-size: 52px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 40px;
+      color: $text-main;
+    }
+
     button {
       margin-top: 2em;
+      font-size: 18px;
       &:hover {
         background-color: $primary-dark;
       }
+    }
+  }
+
+  //--------------------------------- Sekcja 4 ----------------------------------------
+  .section-4 {
+    margin-bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px auto 0 auto;
+    gap: 30px;
+    .content-2 {
+      // margin-right: 6em;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 25%;
+      //align-items: flex-end;
+
+      h2 {
+        font-size: 52px;
+        font-weight: 700;
+        color: $text-main;
+        //margin-bottom: .25em;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 1.2;
+        color: $text-secondary;
+      }
+
+      .cta-btn {
+        margin-left: 6em;
+        margin-top: 20px;
+        //background-color: $primary;
+        color: white;
+        width: 14em;
+        font-size: 20px;
+        padding: 1em 2em;
+        height: 3em;
+        border-radius: 8px;
+        align-self: flex-end;
+        &:hover {
+          background-color: $primary-dark;
+        }
+      }
+    }
+     .hero-img img {
+      padding-bottom: 0;
+      width: 540px;
+      height: auto;
+      object-fit: contain;
+      //box-shadow: 6px 6px 16px rgba(37, 99, 235, 0.20);
     }
   }
 }

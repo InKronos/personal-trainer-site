@@ -9,7 +9,7 @@
         @for (op of opinions; track $index) {
             <div class="opinion-card">
                 <p class="text">{{ op.text }}</p>
-                <div class="stars">★★★★★</div>
+                <app-stars [stars]="op.stars"></app-stars>
                 <p class="author">- {{ op.author }}</p>
             </div>
         }

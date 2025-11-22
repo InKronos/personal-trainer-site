@@ -1,29 +1,119 @@
-<mat-grid-list cols="5" class="main-grid" gutterSize="1em" >
-    <mat-grid-tile [colspan]="3" class="tile tile-1">
-        <div class="content">
-        <h2>Wszystko rozpoczyna się od 1 treningu!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex  sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus  duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar  vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl  malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class  aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos  himenaeos.</p>
-        <button mat-raised-button color="primary">Umów trening</button>
-        </div>
-        <img src="images/trening.png" class="tile-image" />
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" class="tile tile-2">
-        <div class="content">
-            <h2>Kim jestem?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur...</p>
-            <button mat-stroked-button color="primary">Dowiedz się więcej</button>
-        </div>
-        <img src="images/trener.png" class="tile-image" />
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="5" class="tile tile-3">
-    <div class="opinions">
-      <h2>Opinie</h2>
 
-        <app-opinion-carousel></app-opinion-carousel>
-
-      <button mat-raised-button color="primary">Zobacz więcej</button>
+<div class="main-container">
+  <div class="section-1">
+      <div class="content-1">
+          <h2>Jestem Paweł</h2>
+          <span>Zaprowadzę cię na dobrą drogę trenigu</span>
+          <button matButton="filled" color="primary" class="cta-btn">Zaczynajmy!</button>
+      </div>
+      <div class="hero-img">
+        <img src="images/trener-main.png" alt="Trener">
+      </div>
+  </div>
+  <div class="section-2">
+    <h2>Oferta</h2>
+   
+    <div class="offer-content">
+      <mat-card class="offer-card offer1" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Porady</mat-card-title>
+            <mat-icon>edit</mat-icon>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          Porady ode mnie pomogą Ci wprowadzić zdrowe nawyki krok po kroku, bez presji i zbędnych komplikacji. Skupiam się na prostych działaniach, które naprawdę działają, wspierają Twoje cele i codzienne samopoczucie. Dzięki nim łatwiej osiągniesz równowagę i trwałe efekty.
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="offer-card offer2" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Treningi</mat-card-title>
+            <mat-icon>fitness_center</mat-icon>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          Moje treningi pomogą Ci zbudować siłę, poprawić kondycję i poczuć pełną kontrolę nad własnym ciałem. Każda sesja jest przemyślana, skuteczna i dostosowana do Twoich możliwości, tak abyś mógł rozwijać się bezpiecznie, konsekwentnie i z satysfakcją.
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="offer-card offer3" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Diety</mat-card-title>
+            <mat-icon>ramen_dining</mat-icon>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          Z moimi dietami będziesz żył zdrowo, lekko i świadomie. Każdy plan żywieniowy tworzę tak, aby wspierał Twoje cele, dodawał energii i poprawiał samopoczucie. Zdrowe odżywianie może być proste, smaczne i dostępne dla każdego — wystarczy zacząć.
+        </mat-card-content>
+      </mat-card>
+      
+     
+    
+     
     </div>
-  </mat-grid-tile>
+     <div class="section-3">
+        <h2>Opinie</h2>
+        <app-opinion-carousel></app-opinion-carousel>
+        <button matButton="filled" color="primary" >Zobacz więcej</button>
+     </div>
+  </div>
+
+</div>
 
 
-</mat-grid-list>
+<!--
+<div class="main-flex">
+
+  <div class="tile tile-1">
+    <div class="content">
+      <h2>Wszystko rozpoczyna się od 1 treningu!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex  sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus  duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar  vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl  malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class  aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos  himenaeos.</p>
+      <button mat-raised-button color="primary">Umów trening</button>
+    </div>
+    <img src="images/trening.png" class="tile-image" />
+  </div>
+
+  <div class="tile w-2">
+    <div class="content">
+      <h2>Kim jestem?</h2>
+      <p>Lorem ipsum...</p>
+      <button mat-stroked-button color="primary">Dowiedz się więcej</button>
+    </div>
+    <img src="images/trener.png" class="tile-image" />
+  </div>
+
+  <div class="tile w-6">
+    <h2>Opinie</h2>
+    <app-opinion-carousel></app-opinion-carousel>
+    <button mat-raised-button color="primary">Zobacz więcej</button>
+  </div>
+
+  <div class="tile w-4">
+    <h2>Gdzie trenuję?</h2>
+  </div>
+
+  <div class="tile w-2">
+    <div class="content">
+      <h2>Skontaktuj się</h2>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tytuł</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Treść</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+
+    </div>
+  </div>
+
+</div>
+-->

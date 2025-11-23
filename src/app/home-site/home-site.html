@@ -66,9 +66,26 @@
         <img src="images/trener.png" alt="Trener">
       </div>
   </div>
-
-  <div class="section-5">
-    <div class="content-5">
+  <div class="section-5" #statsSection>
+    <div class="item">
+      <p class="numbers"><span [countUp]="10" [duration]="2000" [startWhenVisible]="startCounting">0</span>+ lat</p>
+      <p class="description">Doświadczenia</p>
+    </div>
+    <div class="item">
+      <p class="numbers"><span [countUp]="987" [duration]="4000" [startWhenVisible]="startCounting">0</span>+</p>
+      <p class="description">Podopiecznych którzy mi zaufali</p>
+    </div>
+    <div class="item">
+      <p class="numbers"><span [countUp]="458" [duration]="3400" [startWhenVisible]="startCounting">0</span> tys.</p>
+      <p class="description">Obserwujących na IG</p>
+    </div>
+    <div class="item">
+      <p class="numbers"><span [countUp]="99" [duration]="2900" [startWhenVisible]="startCounting">0</span>%</p>
+      <p class="description">Skuteczność treningów</p>
+    </div>
+  </div>
+  <div class="section-6">
+    <div class="content-6">
       <h2>Zainteresowany?</h2>
       <h3>Skontaktuj się!</h3>
       <p>Wypełnij ten formularz konaktowy, wyślj wiadomość na mój mail super_trener@gmailik.com lub skontakuj się przez moje sociale</p>

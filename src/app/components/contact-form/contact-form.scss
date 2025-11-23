@@ -2,10 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 3em;
-    .input-field{
-       // width: 60%;
-    }
-    .text-area-field {
+    .text-area-field textarea{
         height: 200px;
     }
     button {
@@ -14,4 +11,6 @@
         align-self: flex-end;
         font-size: 18px;
     }
+
+
 }

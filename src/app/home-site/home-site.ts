@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,13 +10,42 @@ import { MatIcon } from "@angular/material/icon";
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ContactForm } from "../components/contact-form/contact-form";
+import { CountUp } from "../directive/count-up";
 @Component({
   selector: 'app-home-site',
-  imports: [MatGridListModule, MatButtonModule, MatFormFieldModule, MatFormFieldModule, OpinionCarousel, MatInputModule, MatCardModule, MatIcon, ContactForm],
+  imports: [MatGridListModule, MatButtonModule, MatFormFieldModule, MatFormFieldModule, OpinionCarousel, MatInputModule, MatCardModule, MatIcon, ContactForm, CountUp],
   templateUrl: './home-site.html',
   styleUrl: './home-site.scss',
 })
-export class HomeSite {
+export class HomeSite implements AfterViewInit {
+
+  startCounting = false;
+
+  @ViewChild('statsSection') statsSection!: ElementRef;
+
+  
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+
+          if (entry.isIntersecting) {
+            this.startCounting = true;
+            this.statsSection.nativeElement.classList.add('visible');
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.4 }
+      );
+
+      observer.observe(this.statsSection.nativeElement);
+    });
+  }
+
+
+
+
 
   facebookIcon: string = 'facebook-black';
   instagramIcon: string = 'instagram-black';
@@ -37,6 +66,9 @@ export class HomeSite {
       'instagram-color',
       sanitizer.bypassSecurityTrustResourceUrl('icons/instagram-color.svg')
     );
+
+
+ 
 }
 
 }

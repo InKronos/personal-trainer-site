@@ -229,4 +229,65 @@ $card-border: #E5E7EB;
       //box-shadow: 6px 6px 16px rgba(37, 99, 235, 0.20);
     }
   }
+
+  //----------------------------------- section 5 -------------------------------------------------
+   .section-5 {
+    margin-bottom: 0;
+    background-color: #EFF6FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20% 0 20%;
+    gap: 100px;
+    .content-5 {
+      // margin-right: 6em;
+      display: flex;
+      flex-direction: column;
+      //gap: 16px;
+      //width: 25%;
+      //align-items: flex-end;
+
+      h2 {
+        font-size: 52px;
+        font-weight: 700;
+        color: $text-main;
+        margin-bottom: 0;
+
+        //margin-bottom: .25em;
+      }
+      h3 {
+        align-self: flex-end;
+        font-size: 28px;
+        color: $text-secondary;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.2;
+        color: $text-secondary;
+        //margin-bottom: .25em;
+      }
+
+      span {
+        font-size: 24px;
+        line-height: 1.2;
+        color: $text-secondary;
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+      }
+      .icons mat-icon{
+          width: 80px;
+          height: 80px;
+          font-size: 16px;
+          &:hover{
+            cursor: pointer;
+          }
+      }
+     
+    }
+   
+  }
 }

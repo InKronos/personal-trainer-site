@@ -1,0 +1,17 @@
+.form-content{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    .input-field{
+       // width: 60%;
+    }
+    .text-area-field {
+        height: 200px;
+    }
+    button {
+        width: 100px;
+        margin-top: 1em;
+        align-self: flex-end;
+        font-size: 18px;
+    }
+}

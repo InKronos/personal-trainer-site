@@ -58,7 +58,7 @@
       <div class="content-2">
           <h2>Kim jestem?</h2>
           <span>
-            Jestem trenerem z dziesięcioletnim doświadczeniem, który przez lata pomógł wielu ludziom osiągnąć ich cele zdrowotne, sportowe i sylwetkowe. W swojej pracy stawiam na indywidualne podejście, skuteczne metody oraz stałe wsparcie, dzięki czemu moi podopieczni czują się pewnie i zmotywowani. Moje treningi łączą profesjonalizm, zaangażowanie i realne efekty, które widać już po kilku tygodniach współpracy. Każdy plan tworzę z myślą o bezpieczeństwie, komforcie oraz długotrwałych rezultatach, które pomagają utrzymać zdrowy styl życia.
+            Jestem trenerem z ponad dziesięcioletnim doświadczeniem, który przez lata pomógł wielu ludziom osiągnąć ich cele zdrowotne, sportowe i sylwetkowe. W swojej pracy stawiam na indywidualne podejście, skuteczne metody oraz stałe wsparcie, dzięki czemu moi podopieczni czują się pewnie i zmotywowani. Moje treningi łączą profesjonalizm, zaangażowanie i realne efekty, które widać już po kilku tygodniach współpracy. Każdy plan tworzę z myślą o bezpieczeństwie, komforcie oraz długotrwałych rezultatach, które pomagają utrzymać zdrowy styl życia.
           </span>
           <button matButton="filled" color="primary" class="cta-btn">Dowiedz się więcej</button>
       </div>
@@ -68,64 +68,29 @@
   </div>
 
   <div class="section-5">
-    <h2>Gdzie trenuję?</h2>
+    <div class="content-5">
+      <h2>Zainteresowany?</h2>
+      <h3>Skontaktuj się!</h3>
+      <p>Wypełnij ten formularz konaktowy, wyślj wiadomość na mój mail super_trener@gmailik.com lub skontakuj się przez moje sociale</p>
+      <div class="icons">
+        <mat-icon 
+        [svgIcon]="facebookIcon"
+        class="fb icon"
+        (mouseenter)="facebookIcon = 'facebook-color'"
+        (mouseleave)="facebookIcon = 'facebook-black'">
+        
+        ></mat-icon>
+        <mat-icon 
+        [svgIcon]="instagramIcon"
+        class="ig icon"
+        (mouseenter)="instagramIcon = 'instagram-color'"
+        (mouseleave)="instagramIcon = 'instagram-black'">
+        </mat-icon>
+      </div>
+      
+    </div>
+    <app-contact-form></app-contact-form>
   </div>
 
 </div>
 
-
-<!--
-<div class="main-flex">
-
-  <div class="tile tile-1">
-    <div class="content">
-      <h2>Wszystko rozpoczyna się od 1 treningu!</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex  sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus  duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar  vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl  malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class  aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos  himenaeos.</p>
-      <button mat-raised-button color="primary">Umów trening</button>
-    </div>
-    <img src="images/trening.png" class="tile-image" />
-  </div>
-
-  <div class="tile w-2">
-    <div class="content">
-      <h2>Kim jestem?</h2>
-      <p>Lorem ipsum...</p>
-      <button mat-stroked-button color="primary">Dowiedz się więcej</button>
-    </div>
-    <img src="images/trener.png" class="tile-image" />
-  </div>
-
-  <div class="tile w-6">
-    <h2>Opinie</h2>
-    <app-opinion-carousel></app-opinion-carousel>
-    <button mat-raised-button color="primary">Zobacz więcej</button>
-  </div>
-
-  <div class="tile w-4">
-    <h2>Gdzie trenuję?</h2>
-  </div>
-
-  <div class="tile w-2">
-    <div class="content">
-      <h2>Skontaktuj się</h2>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Tytuł</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Treść</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-
-    </div>
-  </div>
-
-</div>
--->

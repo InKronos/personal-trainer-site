@@ -2,13 +2,11 @@ import { Component, HostListener } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { Stars } from '../stars/stars';
+import { OpinionService } from '../../services/opinion/opinion-service';
+import { ActivatedRoute } from '@angular/router';
 
 
-interface Opinion {
-  author: string;
-  text: string;
-  stars: number;
-}
+
 
 
 @Component({
@@ -18,19 +16,18 @@ interface Opinion {
   styleUrl: './opinion-carousel.scss',
 })
 export class OpinionCarousel {
-  opinions: Opinion[] = [
-    { author: 'Michał', text: 'Trener jest super, bardzo polecam', stars: 5 },
-    { author: 'Kasia', text: 'Każdy trening dodaje mi pewności siebie.', stars: 3 },
-    { author: 'Stasiek', text: 'Każdy trening poprawia mi kondycję.', stars: 5 },
-    { author: 'Ania', text: 'Uwielbiam trenować z Pawełem', stars: 4.5 },
-    { author: 'Paweł', text: 'Z Trenerem ćwiczę regularnie i jest super', stars: 5 }
-  ];
-
+  opinions: Opinion[] = []
   index = 0;
   visibleCount = 3;
   private intervalId: any;
 
+
+  constructor(private opinionService: OpinionService, private route:ActivatedRoute) {}
+
   ngOnInit(): void {
+     this.route.params.subscribe(params => {
+        this.opinions = this.opinionService.getAll();
+    })
     this.updateVisibleCount(window.innerWidth);
     this.startAutoPlay(); 
   }
@@ -41,14 +38,14 @@ export class OpinionCarousel {
   startAutoPlay() {
     this.intervalId = setInterval(() => {
       this.autoNext();
-    }, 6000); // przesuwanie co 3 sekundy
+    }, 6000); 
   }
 
   autoNext() {
     if (this.index < this.maxIndex) {
       this.index++;
     } else {
-      this.index = 0; // restart od początku (zapętlenie)
+      this.index = 0; 
     }
   }
   
@@ -68,10 +65,8 @@ export class OpinionCarousel {
       this.visibleCount = 3;
     } else if (width >= 900) {
       this.visibleCount = 2;
-      console.log("here2");
     } else {
       this.visibleCount = 1;
-      console.log("here1");
     }
   }
 

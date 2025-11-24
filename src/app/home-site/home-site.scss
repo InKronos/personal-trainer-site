@@ -11,10 +11,20 @@ $card-border: #E5E7EB;
   display: flex;
   flex-direction: column;
   
+  //defining bgc for every 3 sections
+   .section:nth-child(3n + 1 ) {
+     background-color: white;
+   }
+   .section:nth-child(3n + 2) {
+      background-color: #F7F9FC;
+   }
+   .section:nth-child(3n + 3) {
+      background-color: #EFF6FF;
+   }
+
 
    .section-1 {
     margin-bottom: 0;
-    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,7 +32,6 @@ $card-border: #E5E7EB;
     padding: 60px auto 0 auto;
    
     .content-1 {
-      // margin-right: 6em;
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -45,7 +54,6 @@ $card-border: #E5E7EB;
       .cta-btn {
         margin-left: 6em;
         margin-top: 20px;
-        //background-color: $primary;
         color: white;
         width: 10em;
         font-size: 20px;
@@ -136,7 +144,6 @@ $card-border: #E5E7EB;
 
     .offer-content {
       display: flex;
-      //flex-wrap: wrap;
       justify-content: center;
       gap: 60px;
 
@@ -197,11 +204,7 @@ $card-border: #E5E7EB;
         margin-bottom: 2.5em;
       }
       .offer2{
-        //margin-bottom: 2.5em;
         align-self: flex-end;
-      }
-      .offer4{
-        display: none;
       }
     }
     @media (max-width: 900px) {
@@ -211,19 +214,16 @@ $card-border: #E5E7EB;
       .offer-content {
           align-items: center;
           flex-direction: column;
-          .offer3 {
+          .offer1, .offer3 {
             margin-bottom: 0;
           }
           .offer1{
-            display: none;
-
+            order:5;
           }
           .offer2 {
             align-self: center;
           }
-          .offer4 {
-            display: flex;
-          }
+          
       }
 
     }
@@ -234,7 +234,6 @@ $card-border: #E5E7EB;
   .section-3 {
     margin-top: 20px;
     padding: 20px 0 80px 0;
-    background-color: #EFF6FF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,7 +264,6 @@ $card-border: #E5E7EB;
   //--------------------------------- section 4 ----------------------------------------
   .section-4 {
     margin-bottom: 0;
-    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -273,18 +271,15 @@ $card-border: #E5E7EB;
     padding: 60px auto 0 auto;
     gap: 30px;
     .content-2 {
-      // margin-right: 6em;
       display: flex;
       flex-direction: column;
       gap: 16px;
       width: 25%;
-      //align-items: flex-end;
 
       h2 {
         font-size: 52px;
         font-weight: 700;
         color: $text-main;
-        //margin-bottom: .25em;
       }
 
       p {
@@ -296,7 +291,6 @@ $card-border: #E5E7EB;
       .cta-btn {
         margin-left: 6em;
         margin-top: 20px;
-        //background-color: $primary;
         color: white;
         width: 14em;
         font-size: 20px;
@@ -314,7 +308,6 @@ $card-border: #E5E7EB;
       width: 540px;
       height: auto;
       object-fit: contain;
-      //box-shadow: 6px 6px 16px rgba(37, 99, 235, 0.20);
     }
 
     @media (max-width: 1000px) {
@@ -333,11 +326,7 @@ $card-border: #E5E7EB;
       }
 
       .hero-img img {
-      padding-bottom: 0;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      //box-shadow: 6px 6px 16px rgba(37, 99, 235, 0.20);
+        width: 100%;
     }
     }
   }
@@ -346,7 +335,6 @@ $card-border: #E5E7EB;
 
   .section-5 {
     margin-top: 20px;
-    background-color: #F7F9FC;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -407,7 +395,6 @@ $card-border: #E5E7EB;
   //----------------------------------- section 6 -------------------------------------------------
    .section-6 {
     margin-bottom: 0;
-    background-color: #EFF6FF;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -415,12 +402,8 @@ $card-border: #E5E7EB;
     padding: 60px 20% 0 20%;
     gap: 100px;
     .content-6 {
-      // margin-right: 6em;
       display: flex;
       flex-direction: column;
-      //gap: 16px;
-      //width: 25%;
-      //align-items: flex-end;
       
       h2 {
         font-size: 52px;
@@ -429,7 +412,6 @@ $card-border: #E5E7EB;
         margin-bottom: 0;
         margin-right: 0;
         padding-right: 0;
-        //margin-bottom: .25em;
       }
       h3 {
         align-self: flex-end;
@@ -441,7 +423,6 @@ $card-border: #E5E7EB;
         font-size: 24px;
         line-height: 1.2;
         color: $text-secondary;
-        //margin-bottom: .25em;
       }
 
       span {

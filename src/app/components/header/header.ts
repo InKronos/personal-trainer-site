@@ -10,7 +10,11 @@ import { RouterLink } from "@angular/router";
 export class Header {
   isOpen = false;
 
-  
+toggleLi() {
+  if(document.body.style.overflow === 'hidden'){
+    this.isOpen = !this.isOpen;
+  }
+}
 toggleMenu() {
   this.isOpen = !this.isOpen;
   if (this.isOpen) {

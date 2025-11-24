@@ -11,6 +11,17 @@
         align-self: flex-end;
         font-size: 18px;
     }
+    @media (max-width: 900px) {
+        padding: 1em;
+        mat-checkbox {
+            font-size: 5%;
+            justify-content: center;
+            text-align: justify;
+        }
+        button {
+            align-self: center;
+        }
+    }
 
 
 }

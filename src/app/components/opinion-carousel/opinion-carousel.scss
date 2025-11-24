@@ -11,7 +11,7 @@
 }
 
 button{
-  width: 2em;
+  //width: 2em;
   
 }
 
@@ -51,12 +51,34 @@ button{
 }
 
 @media (max-width: 699px) {
+
+  .viewport {
+    width: calc(100% - 96px); /* 2 x 48px na strzałki */
+  }
+
   .track {
     gap: 16px;
   }
+
   .opinion-card {
     flex: 0 0 100%;
   }
+    .opinion-card {
+    flex: 0 0 100% !important;   
+    max-width: 100%;            
+    padding: 0 12px;             
+    text-align: center;
+    .text {
+      font-size: 15px;
+      padding: 0 8px;              
+      line-height: 1.4;             
+      word-break: break-word;       
+  }
+  }
+  button {
+    display: none;
+  }
+
 }
 
 

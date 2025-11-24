@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -66,9 +65,8 @@ export class HomeSite implements AfterViewInit {
       'instagram-color',
       sanitizer.bypassSecurityTrustResourceUrl('icons/instagram-color.svg')
     );
+  }
 
 
- 
-}
 
 }

@@ -5,7 +5,7 @@
 
     <div class="viewport">
     <!-- track przesuwany przez transform -->
-    <div class="track" [style.transform]="'translateX(' + translatePercent + '%)'" >
+    <div class="track" [style.transform]="'translateX(' + translatePercent  + '%)'" >
         @for (op of opinions; track $index) {
             <div class="opinion-card">
                 <p class="text">{{ op.text }}</p>

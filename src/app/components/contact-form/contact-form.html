@@ -37,7 +37,7 @@
         <mat-error>{{errorMessageText()}}</mat-error>
         }
     </mat-form-field>
-    <mat-checkbox [formControl]="checked">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z wysłaniem zapytania przez powyższy formularz kontaktowy. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Zostałem poinformowany, że przysługuje mi prawo dostępu do moich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. <span style="color: brown;">*</span>
+    <mat-checkbox [formControl]="checked" >Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z wysłaniem zapytania przez powyższy formularz kontaktowy. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Zostałem poinformowany, że przysługuje mi prawo dostępu do moich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. <span style="color: brown;">*</span>
         <mat-error class="error-chcekbox">{{errorMessageChcekBox()}}</mat-error> <!-- Nie jest w @if aby nie przesuwał przycisku jak się pojawi -->
     </mat-checkbox>
     <button matButton="filled" (click)="buttonClick()">Wyślij</button>

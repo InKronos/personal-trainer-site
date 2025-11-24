@@ -21,9 +21,9 @@ export class OpinionCarousel {
   opinions: Opinion[] = [
     { author: 'Michał', text: 'Trener jest super, bardzo polecam', stars: 5 },
     { author: 'Kasia', text: 'Każdy trening dodaje mi pewności siebie.', stars: 3 },
-    { author: 'Stasiek', text: 'Każdy trening dodaje mi pewności siebie i poprawia kondycję.', stars: 5 },
-    { author: 'Ania', text: 'Uwielbiam trenować z Pawełem, bo treningi są różnorodne i naprawdę działają.', stars: 4.5 },
-    { author: 'Paweł', text: 'Z Trenerem ćwiczę regularnie, bo treningi są przyjemne i efektywne.', stars: 5 }
+    { author: 'Stasiek', text: 'Każdy trening poprawia mi kondycję.', stars: 5 },
+    { author: 'Ania', text: 'Uwielbiam trenować z Pawełem', stars: 4.5 },
+    { author: 'Paweł', text: 'Z Trenerem ćwiczę regularnie i jest super', stars: 5 }
   ];
 
   index = 0;
@@ -55,6 +55,7 @@ export class OpinionCarousel {
   @HostListener('window:resize', ['$event'])
   onResize(e: any) {
     const prev = this.visibleCount;
+     console.log(window.innerWidth);
     this.updateVisibleCount(e.target.innerWidth);
     if (this.index > this.maxIndex) {
       this.index = this.maxIndex;
@@ -62,12 +63,15 @@ export class OpinionCarousel {
   }
 
   private updateVisibleCount(width: number) {
+   
     if (width >= 1200) {
       this.visibleCount = 3;
-    } else if (width >= 700) {
+    } else if (width >= 900) {
       this.visibleCount = 2;
+      console.log("here2");
     } else {
       this.visibleCount = 1;
+      console.log("here1");
     }
   }
 
@@ -80,9 +84,11 @@ export class OpinionCarousel {
     else {
       this.index = this.opinions.length - this.visibleCount;
     }
+    
   }
 
   next() {
+    console.log(this.visibleCount);
     if (this.index < this.opinions.length - this.visibleCount) this.index++;
     else {
       this.index = 0;
@@ -90,6 +96,9 @@ export class OpinionCarousel {
   }
 
    get translatePercent(): number {
+    
     return -(this.index * (100 / this.visibleCount));
   }
+
+  
 }

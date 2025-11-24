@@ -1,6 +1,15 @@
 <header>
     <a href="#" routerLink="/" class="logo">Tp</a>
-    <nav>
+
+     <button class="hamburger" (click)="toggleMenu()" [class.open]="isOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    @if(isOpen){
+        <div class="overlay" (click)="toggleMenu()"></div>
+    }
+    <nav [class.open]="isOpen" [class.side-menu]="isOpen">
         <ul>
             <li><a href="">Osiągnięcia</a></li>
             <li><a href="">Przemiany</a></li>

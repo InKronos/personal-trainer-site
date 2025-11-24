@@ -1,10 +1,13 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';import { MatFormField, MatLabel } from "@angular/material/form-field";
+import {ChangeDetectionStrategy, Component, inject, signal} from '@angular/core';import { MatFormField, MatLabel } from "@angular/material/form-field";
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatAnchor } from "@angular/material/button";
 import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
-import {FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {FormControl, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 import {isEmpty, merge} from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogAfterForm } from '../dialog-after-form/dialog-after-form';
 
 @Component({
   selector: 'app-contact-form',
@@ -18,6 +21,8 @@ export class ContactForm {
   readonly title = new FormControl('', [Validators.required]);
   readonly text = new FormControl('', [Validators.required]);
   readonly checked = new FormControl(false);
+  readonly dialog = inject(MatDialog);
+
   errorMessageEmail = signal('');
   errorMessageTitle = signal('');
   errorMessageText = signal('');
@@ -83,7 +88,9 @@ export class ContactForm {
     this.updateErrorMessageTitle();
     this.updateErrorMessageText();
     if(this.checked.value && !this.email.hasError('requied') && !this.email.hasError('email') && !this.title.hasError('required') && !this.text.hasError('required')){
-      console.log("ok");
+      this.dialog.open(DialogAfterForm);
     }
   }
+
+  
 }
